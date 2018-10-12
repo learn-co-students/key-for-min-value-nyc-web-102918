@@ -3,10 +3,11 @@
 
 def key_for_min_value(name_hash)
   keyF = nil
-  min = Float::INFINITY
+  min = 1000000
   name_hash.each do |key, val|
     if val < min
-      keyF = key 
+      min = val
+      keyF = key
     end
   end
   keyF
